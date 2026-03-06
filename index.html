@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows in the Grass</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Shadows in the Grass</h1>
+            <div id="stats">
+                <span id="death-count">Mortes: 0</span>
+            </div>
+        </header>
+        
+        <div id="canvas-wrapper">
+            <canvas id="gameCanvas"></canvas>
+            <div id="overlay" class="hidden">
+                <div id="overlay-content">
+                    <h2 id="overlay-title">Fim de Jogo</h2>
+                    <p id="overlay-message">O bicho te pegou...</p>
+                    <button id="restart-btn">Tentar Novamente</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Use WASD ou Setas para mover. Observe o mato antes de atravessar.</p>
+        </footer>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
