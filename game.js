@@ -14,7 +14,7 @@ const musicToggleBtn = document.getElementById('music-toggle');
 
 // --- Configuration ---
 const TILE_SIZE = 48;
-const PLAYER_SIZE = 32;
+const PLAYER_SIZE = 40;
 const MAP_WIDTH = 15;
 const MAP_HEIGHT = 10;
 
@@ -406,13 +406,9 @@ function draw() {
     // Draw Player (on top of darkness)
     ctx.save();
     ctx.translate(player.x, player.y);
-    const bob = Math.sin(Date.now() / 200) * 2;
     
-    ctx.shadowBlur = 15;
-    ctx.shadowColor = "rgba(157, 78, 221, 0.5)";
-    
-    // Use the PNG asset for the player
-    ctx.drawImage(assets.player, -PLAYER_SIZE / 2, -PLAYER_SIZE / 2 + bob, PLAYER_SIZE, PLAYER_SIZE);
+    // Draw the PNG asset exactly as it is, slightly larger
+    ctx.drawImage(assets.player, -PLAYER_SIZE / 2, -PLAYER_SIZE / 2, PLAYER_SIZE, PLAYER_SIZE);
     
     ctx.restore();
 }
